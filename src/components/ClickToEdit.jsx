@@ -1,20 +1,5 @@
-import styled from "styled-components";
 import React, { useState, useEffect } from "react";
-
-const CTEInput = styled.input``;
-const CTEArea = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const CTEContainer = styled(CTEArea)`
-  flex-direction: row;
-`;
-const CTEWrap = styled(CTEArea)`
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-`;
+import { CTEArea, CTEContainer, CTEInput, CTEWrap } from "../style/clickToEdit";
 
 const ClickToEdit = () => {
   const [name, setName] = useState("김코딩");
