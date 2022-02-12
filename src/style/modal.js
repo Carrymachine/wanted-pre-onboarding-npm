@@ -16,7 +16,20 @@ const ModalArea = styled.div`
   overflow: hidden;
 `;
 
-const ModalBtn = styled.button``;
+const ModalBtn = styled.button`
+  background: #fff;
+  border: 2px solid #a58af7;
+  color: #a58af7;
+  font-weight: bold;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  &:hover {
+    background: #946fff;
+    transition: 0.5s;
+    color: #fff;
+  }
+`;
 
 const Modals = styled.div`
   display: flex;

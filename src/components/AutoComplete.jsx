@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import { ACArea, ACDataListItemForm, ACDataUl, ACDataView, ACInput } from "../style/autoComplete";
 const data = [
   {
+    id: 0,
+    category: "country",
+    value: "united arab emirates",
+    flag: "🇦🇪",
+  },
+  {
     id: 1,
     category: "country",
     value: "south korea",
@@ -55,6 +61,30 @@ const data = [
     value: "jamaica",
     flag: "🇯🇲",
   },
+  {
+    id: 10,
+    category: "country",
+    value: "argentina",
+    flag: "🇦🇷",
+  },
+  {
+    id: 11,
+    category: "country",
+    value: "australia",
+    flag: "🇦🇺",
+  },
+  {
+    id: 12,
+    category: "country",
+    value: "canada",
+    flag: "🇨🇦",
+  },
+  {
+    id: 13,
+    category: "country",
+    value: "france",
+    flag: "🇫🇷",
+  },
 ];
 
 const AutoComplete = () => {
@@ -62,10 +92,17 @@ const AutoComplete = () => {
   const [editedData, setData] = useState([]);
 
   const editedCountry = () => {
-    return data.filter((country) => {
-      const inputValue = document.getElementById("auto-complete-input");
+    const inputValue = document.getElementById("auto-complete-input");
+
+    const filterFirstChar = data.filter((country) => {
+      return country.value.slice(0, inputValue.value.length) === inputValue.value;
+    });
+
+    const filterCorrectWord = data.filter((country) => {
       return country.value.includes(inputValue.value);
     });
+
+    return filterFirstChar.length === 0 ? filterCorrectWord : filterFirstChar;
   };
 
   const clickResult = (e) => {

@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 const ACInput = styled.input`
   height: 40px;
-  padding: 5px 10px; ;
+  padding: 5px 10px;
+
+  &:focus {
+    outline: none;
+    border: 1.5px solid #916bff;
+    border-radius: 2px;
+  }
 `;
 
 const ACArea = styled.div`

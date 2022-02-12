@@ -4,6 +4,13 @@ import { ModalArea, ModalBtn, Modals } from "../style/modal";
 
 const Modal = () => {
   const [isOpen, setToggle] = useState(false);
+  const body = document.querySelector("body");
+
+  if (isOpen) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "";
+  }
 
   return (
     <>

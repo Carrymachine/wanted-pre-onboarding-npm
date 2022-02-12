@@ -12,14 +12,16 @@ const TagsForm = styled.div``;
 const TagContainer = styled.div`
   width: 300px;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 4px;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
 
   & > ${TagsForm} {
     padding: 5px;
-    border: 1px solid #ccc;
+    background: #d2c4fb;
+    border-radius: 5px;
+    min-width: 40px;
     margin: 5px;
     display: flex;
     align-items: center;

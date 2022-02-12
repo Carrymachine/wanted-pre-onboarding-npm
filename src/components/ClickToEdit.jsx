@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CTEArea, CTEContainer, CTEInput, CTEWrap } from "../style/clickToEdit";
+import { CTEArea, CTEContainer, CTEInput, CTEWrap, CTELabel } from "../style/clickToEdit";
 
 const ClickToEdit = () => {
   const [name, setName] = useState("김코딩");
@@ -27,14 +27,16 @@ const ClickToEdit = () => {
     <CTEWrap onMouseUp={handleClick}>
       <CTEArea>
         <CTEContainer>
-          이름 : <CTEInput id="input-name" onChange={(e) => handleChange(e)} defaultValue={info.name} />
+          <CTELabel>이름</CTELabel>
+          <CTEInput id="input-name" onChange={(e) => handleChange(e)} defaultValue={info.name} />
         </CTEContainer>
 
         <CTEContainer>
-          나이 : <CTEInput id="input-age" onChange={(e) => handleChange(e)} defaultValue={info.age} />
+          <CTELabel>나이</CTELabel>
+          <CTEInput id="input-age" onChange={(e) => handleChange(e)} defaultValue={info.age} />
         </CTEContainer>
         <div style={{ marginTop: "16px" }}>
-          이름 {info.name} 나이 {info.age}
+          이름 <strong>{info.name}</strong> 나이 <strong>{info.age}</strong>
         </div>
       </CTEArea>
     </CTEWrap>

@@ -9,9 +9,10 @@ const Tag = () => {
   const handleKeyPress = (e) => {
     let copyTags = [...tags];
     if (e.key === "Enter") {
-      const tagsValue = document.getElementById("input-tag").value;
-      copyTags.push(tagsValue);
+      const tagsValue = document.getElementById("input-tag");
+      copyTags.push(tagsValue.value);
       setTags(copyTags);
+      tagsValue.value = "";
     }
   };
   const removeTag = (e) => {
