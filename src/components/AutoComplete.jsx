@@ -40,7 +40,7 @@ const data = [
   {
     id: 6,
     category: "country",
-    value: "singapre",
+    value: "singapore",
     flag: "🇸🇬",
   },
   {
