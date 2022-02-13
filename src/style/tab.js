@@ -19,6 +19,10 @@ const TabForm = styled.button`
     background: ${(props) => (props.selected ? "#000" : "#fff")};
     transition: 0.5s;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export { TabForm, TabUnderLine, TabWrap };

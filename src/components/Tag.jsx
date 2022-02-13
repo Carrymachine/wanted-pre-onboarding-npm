@@ -8,7 +8,7 @@ const Tag = () => {
 
   const handleKeyPress = (e) => {
     let copyTags = [...tags];
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.key === " ") {
       const tagsValue = document.getElementById("input-tag");
       copyTags.push(tagsValue.value);
       setTags(copyTags);
@@ -26,7 +26,7 @@ const Tag = () => {
     return (
       <TagsForm key={i} id={i}>
         {tag}
-        <img src={Close} style={{ width: "10px", height: "10px", marginLeft: "8px" }} onClick={(e) => removeTag(e)} />
+        <img src={Close} style={{ width: "10px", height: "10px", marginLeft: "8px", cursor: "pointer" }} onClick={(e) => removeTag(e)} />
       </TagsForm>
     );
   });

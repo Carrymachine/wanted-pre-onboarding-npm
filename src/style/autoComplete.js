@@ -34,8 +34,10 @@ const ACDataListItemForm = styled.li`
   border-radius: 5px;
   height: 40px;
   align-items: center;
+
   &:hover {
     background: #d1c4f7;
+    cursor: pointer;
   }
 `;
 

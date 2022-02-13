@@ -95,11 +95,11 @@ const AutoComplete = () => {
     const inputValue = document.getElementById("auto-complete-input");
 
     const filterFirstChar = data.filter((country) => {
-      return country.value.slice(0, inputValue.value.length) === inputValue.value;
+      return country.value.slice(0, inputValue.value.length) === inputValue.value.toLowerCase();
     });
 
     const filterCorrectWord = data.filter((country) => {
-      return country.value.includes(inputValue.value);
+      return country.value.includes(inputValue.value.toLowerCase());
     });
 
     return filterFirstChar.length === 0 ? filterCorrectWord : filterFirstChar;

@@ -28,6 +28,7 @@ const ModalBtn = styled.button`
     background: #946fff;
     transition: 0.5s;
     color: #fff;
+    cursor: pointer;
   }
 `;
 
@@ -41,5 +42,21 @@ const Modals = styled.div`
 
   flex-direction: column;
 `;
+const ModalCloseBtn = styled.button`
+  margin-bottom: 24px;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #ff7293;
+  background: #fff;
+  border-radius: 3px;
+  color: #ff7293;
 
-export { ModalArea, ModalBtn, Modals };
+  &:hover {
+    background: #ff7293;
+    transition: 0.5s;
+    color: #fff;
+    cursor: pointer;
+  }
+`;
+
+export { ModalArea, ModalBtn, Modals, ModalCloseBtn };
