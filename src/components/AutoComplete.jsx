@@ -9,11 +9,13 @@ const AutoComplete = ({ data }) => {
     const inputValue = document.getElementById("auto-complete-input");
 
     const filterFirstChar = data.filter((country) => {
-      return country.value.slice(0, inputValue.value.length) === inputValue.value.toLowerCase();
+      const dataValue = country.value.replace(" ", "");
+      return dataValue.slice(0, inputValue.value.length) === inputValue.value.replace(" ", "").toLowerCase();
     });
 
     const filterCorrectWord = data.filter((country) => {
-      return country.value.includes(inputValue.value.toLowerCase());
+      const dataValue = country.value.replace(" ", "");
+      return dataValue.includes(inputValue.value.replace(" ", "").toLowerCase());
     });
 
     return filterFirstChar.length === 0 ? filterCorrectWord : filterFirstChar;

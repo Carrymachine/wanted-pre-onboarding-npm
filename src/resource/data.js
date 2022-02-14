@@ -26,7 +26,7 @@ const data = [
   {
     id: 4,
     category: "country",
-    value: "south america",
+    value: "united states america",
     flag: "🇺🇸",
   },
   {
@@ -82,6 +82,54 @@ const data = [
     category: "country",
     value: "france",
     flag: "🇫🇷",
+  },
+  {
+    id: 14,
+    category: "country",
+    value: "russia",
+    flag: "🇷🇺",
+  },
+  {
+    id: 15,
+    category: "country",
+    value: "poland",
+    flag: "🇵🇱",
+  },
+  {
+    id: 16,
+    category: "country",
+    value: "philippines",
+    flag: "🇵🇭",
+  },
+  {
+    id: 17,
+    category: "country",
+    value: "norway",
+    flag: "🇳🇴",
+  },
+  {
+    id: 18,
+    category: "country",
+    value: "monaco",
+    flag: "🇲🇨",
+  },
+  {
+    id: 19,
+    category: "country",
+    value: "italy",
+    flag: "🇮🇹",
+  },
+  {
+    id: 20,
+    category: "country",
+    value: "spain",
+    flag: "🇪🇸",
+  },
+  {
+    id: 21,
+    category: "country",
+    value: "united kingdom",
+    flag: "🇬🇧",
   },
 ];
 
