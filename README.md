@@ -74,7 +74,7 @@ test component 3개를 생성하고 각 탭이 클릭될 때마다 `selectedTab 
 
 `Enter | Spacebar`가 입력되면 state에 추가되는 `handleKeyPress`
 
-태그 생성 후 `X` 클릭 시 state에서 해당 `X` 버튼의 부모 요소(태그)가 삭제되는 ``removeTag` 두가지 함수로 구성하고
+태그 생성 후 `X` 클릭 시 state에서 해당 `X` 버튼의 부모 요소(태그)가 삭제되는 `removeTag` 두가지 함수로 구성하고
 
 `state.map`으로 렌더링 했습니다.
 
